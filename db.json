@@ -1,7 +1,22 @@
 {
-    "users":[
-        {"id":1, "name":"Myra"}
-    ],
-    "albums":[],
-    "photos":[]
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "id": "d0d9",
+      "name": "Cheryl Goodwin"
+    },
+    {
+      "id": "0c57",
+      "name": "Antoinette Balistreri"
+    },
+    {
+      "id": "dc2d",
+      "name": "Emanuel Koelpin"
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
