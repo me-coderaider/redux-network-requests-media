@@ -1,9 +1,9 @@
-import { useEffect, useState, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { fetchUsers, addUser } from "../store";
 import Button from "./Button";
 import Skeleton from "./Skeleton";
-
+import UsersListItem from "./UsersListItem";
 import { useThunk } from "../hooks/use-thunk";
 
 function UsersList() {
@@ -65,7 +65,7 @@ function UsersList() {
     const handleAddUser = () => {
         doCreateUser();
     };
-    /*
+    /* -------------------------------------------------------------
     // if (isLoading) {
     if (isLoadingUsers) {
         // return <div>Loading...</div>;
@@ -96,16 +96,18 @@ function UsersList() {
         content = <div>Error fetching data...</div>;
     } else {
         content = data.map((user) => {
-            return (
-                <div key={user.id} className="mb-2 border rounded">
-                    <div className="flex p-2 justify-between items-center cursor-pointer">
-                        {user.name}
-                    </div>
-                </div>
-            );
+            return <UsersListItem key={user.id} user={user} />;
+            // moving below code to 'UsersListItem.js'
+            // return (
+            //     <div key={user.id} className="mb-2 border rounded">
+            //         <div className="flex p-2 justify-between items-center cursor-pointer">
+            //             {user.name}
+            //         </div>
+            //     </div>
+            // );
         });
     }
-
+    // -------------------------------------------------------------
     return (
         <div>
             <div className="flex flex-row justify-between items-center m-3">
