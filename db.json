@@ -25,6 +25,12 @@
       "name": "Mrs. Vicki Boyle"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "f667",
+      "title": "albums asdf",
+      "userId":"f667"
+    }
+  ],
   "photos": []
 }
