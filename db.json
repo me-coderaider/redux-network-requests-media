@@ -29,7 +29,17 @@
     {
       "id": "f667",
       "title": "albums asdf",
-      "userId":"f667"
+      "userId": "f667"
+    },
+    {
+      "id": "9ddc",
+      "userId": "f667",
+      "title": "Handcrafted Bronze Gloves"
+    },
+    {
+      "id": "638f",
+      "userId": "f667",
+      "title": "Awesome Wooden Chicken"
     }
   ],
   "photos": []
