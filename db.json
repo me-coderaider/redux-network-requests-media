@@ -15,14 +15,6 @@
     {
       "id": "2d7f",
       "name": "Sonja Kiehn"
-    },
-    {
-      "id": "4ecf",
-      "name": "Darlene Reynolds"
-    },
-    {
-      "id": "f753",
-      "name": "Mrs. Vicki Boyle"
     }
   ],
   "albums": [
@@ -55,6 +47,16 @@
       "id": "38c7",
       "userId": "f667",
       "title": "Handcrafted Granite Cheese"
+    },
+    {
+      "id": "9f27",
+      "userId": "f667",
+      "title": "Unbranded Bronze Sausages"
+    },
+    {
+      "id": "0590",
+      "userId": "f667",
+      "title": "Gorgeous Metal Towels"
     }
   ],
   "photos": []

@@ -1,10 +1,22 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
 
+// DEV ONLY!!! -- Adding a pause
+const pause = (duration) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, duration);
+    });
+};
+
 const albumsApi = createApi({
     reducerPath: "albums",
     baseQuery: fetchBaseQuery({
         baseUrl: "http://localhost:3005",
+        fetchFn: async (...args) => {
+            // REMOVE FOR PRODUCTION
+            await pause(1000);
+            return fetch(...args); // adding to override the fetch() used by RTK-Q
+        },
     }),
     endpoints(builder) {
         return {
