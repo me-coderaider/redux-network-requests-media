@@ -5,8 +5,8 @@ import ExpandablePanel from "./ExpandablePanel";
 
 function AlbumList({ user }) {
     const { data, error, isLoading } = useFetchAlbumsQuery(user);
+    // useFetchAlbumsQuery(user); // for understand re-fetching of requests using RTKQ
     const [addAlbum, results] = useAddAlbumMutation();
-
     const handleAddAlbum = () => {
         addAlbum(user);
     };

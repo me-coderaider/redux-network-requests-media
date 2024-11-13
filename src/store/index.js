@@ -13,6 +13,9 @@ export const store = configureStore({
     },
 });
 
+// TEMPORARY, FOR TESTING AND LOOKING INTO THE STORE
+// window.store = store;
+
 setupListeners(store.dispatch);
 
 export * from "./thunks/fetchUsers";
