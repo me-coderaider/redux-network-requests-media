@@ -4,7 +4,7 @@ import Button from "./Button";
 import AlbumListItem from "./AlbumListItem";
 
 function AlbumList({ user }) {
-    const { data, error, isLoading } = useFetchAlbumsQuery(user);
+    const { data, error, isFetching } = useFetchAlbumsQuery(user);
     // useFetchAlbumsQuery(user); // for understand re-fetching of requests using RTKQ
     const [addAlbum, results] = useAddAlbumMutation();
     const handleAddAlbum = () => {
@@ -12,7 +12,10 @@ function AlbumList({ user }) {
     };
 
     let content;
-    if (isLoading) {
+    // if (isLoading) {
+    if (isFetching) {
+        // using 'isFetching' to 'remove' the fetching delay of albums
+
         content = <Skeleton className="h-10 w-full" times={3} />;
     } else if (error) {
         content = <div>Error loading albums.</div>;

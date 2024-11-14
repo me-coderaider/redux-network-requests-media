@@ -22,7 +22,8 @@ const albumsApi = createApi({
         return {
             removeAlbum: builder.mutation({
                 invalidatesTags: (result, error, album) => {
-                    return [{ type: "Album", id: album.userId }];
+                    // return [{ type: "Album", id: album.userId }]; // replacing with CLEVER TAG implementation
+                    return [{ type: "Album", id: album.id }]; // replacing with CLEVER TAG implementation
                 },
                 query: (album) => {
                     return {
@@ -34,7 +35,8 @@ const albumsApi = createApi({
             addAlbum: builder.mutation({
                 // invalidatesTags: ["Album"], // providing dyamic query and avoid excessing results
                 invalidatesTags: (result, error, user) => {
-                    return [{ type: "Album", id: user.id }];
+                    // return [{ type: "Album", id: user.id }]; // replacing with CLEVER TAG implementation
+                    return [{ type: "UsersAlbums", id: user.id }];
                 },
 
                 query: (user) => {
@@ -51,7 +53,14 @@ const albumsApi = createApi({
             fetchAlbums: builder.query({
                 // providesTags: ["Album"], // providing dyamic query and avoid excessing results
                 providesTags: (result, error, user) => {
-                    return [{ type: "Album", id: user.id }];
+                    // return [{ type: "Album", id: user.id }]; // replacing with CLEVER TAG implementation
+
+                    const tags = result.map((album) => {
+                        // little grouping of tags one for each album
+                        return { type: "Album", id: album.id };
+                    });
+                    tags.push({ type: "UsersAlbums", id: user.id });
+                    return tags;
                 },
 
                 query: (user) => {
