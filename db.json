@@ -34,5 +34,26 @@
       "title": "Fantastic Frozen Chicken"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "dc14",
+      "albumId": "38c7",
+      "url": "https://picsum.photos/seed/xo9NDZErp/1408/1349"
+    },
+    {
+      "id": "327e",
+      "albumId": "38c7",
+      "url": "https://picsum.photos/seed/leQdsv/2014/1869"
+    },
+    {
+      "id": "5995",
+      "albumId": "38c7",
+      "url": "https://picsum.photos/seed/axzwtGUKv/3118/3762"
+    },
+    {
+      "id": "0c60",
+      "albumId": "38c7",
+      "url": "https://picsum.photos/seed/dSWFDKc/184/3949"
+    }
+  ]
 }
