@@ -19,26 +19,6 @@
   ],
   "albums": [
     {
-      "id": "9ddc",
-      "userId": "f667",
-      "title": "Handcrafted Bronze Gloves"
-    },
-    {
-      "id": "638f",
-      "userId": "f667",
-      "title": "Awesome Wooden Chicken"
-    },
-    {
-      "id": "2ae0",
-      "userId": "f667",
-      "title": "Fantastic Plastic Cheese"
-    },
-    {
-      "id": "8551",
-      "userId": "f667",
-      "title": "Practical Granite Gloves"
-    },
-    {
       "id": "38c7",
       "userId": "f667",
       "title": "Handcrafted Granite Cheese"
@@ -47,11 +27,6 @@
       "id": "9f27",
       "userId": "f667",
       "title": "Unbranded Bronze Sausages"
-    },
-    {
-      "id": "0590",
-      "userId": "f667",
-      "title": "Gorgeous Metal Towels"
     }
   ],
   "photos": []
